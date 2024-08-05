@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Campo à Cidade - Colhendo Oportunidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Do Campo à Cidade</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="banner">
+            <div class="banner-content">
+                <h2>Colhendo Oportunidades</h2>
+                <p>Transforme seu futuro com novas possibilidades.</p>
+                <button onclick="scrollToSection('contact')">Entre em Contato</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre</h2>
+        <p>Descubra como a transição do campo para a cidade pode abrir novas portas e oportunidades. Veja como essa jornada é importante para o crescimento pessoal e profissional.</p>
+        <div class="info-cards">
+            <div class="card">
+                <img src="image/dsd.jpg" alt="Campo">
+                <div class="card-content">
+                    <h3>Vida no Campo</h3>
+                    <p>O campo oferece tranquilidade e uma conexão com a natureza. É o ponto de partida para muitas histórias de sucesso.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/city.jpg" alt="Cidade">
+                <div class="card-content">
+                    <h3>Vida na Cidade</h3>
+                    <p>A cidade proporciona oportunidades de crescimento e inovação. É o destino final para muitas pessoas em busca de novos horizontes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="image/gente-de-campo-e1559426216179-800x400.jpg" alt="Oportunidade 1" onclick="openModal('oportunidade1.jpg')">
+            <img src="image/caged-2.jpg" alt="Oportunidade 2" onclick="openModal('oportunidade2.jpg')">
+            <img src="image/304539-conheca-os-setores-com-mais-oportunidades-de-emprego-por-cidade1.jpg" alt="Oportunidade 3" onclick="openModal('oportunidade3.jpg')">
+        </div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="caption"></div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="button" onclick="submitForm()">Enviar</button>
+        </form>
+        <div id="form-result"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Do Campo à Cidade. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
